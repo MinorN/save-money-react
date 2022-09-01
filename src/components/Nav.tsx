@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
-import Icon from './icon';
+import Icon from './Icon';
 import React from 'react';
 
 const NavWrapper = styled.nav`
