@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, Route, HashRouter as Router, Switch, Redirect} from 'react-router-dom';
+import {Route, HashRouter as Router, Switch, Redirect} from 'react-router-dom';
 import styled from 'styled-components';
 import Nav from './components/Nav';
 
@@ -28,7 +28,7 @@ function App() {
                         <Route path="*"><NoMatch/></Route>
                     </Switch>
                 </Main>
-                <Nav />
+                <Nav/>
             </Wrapper>
         </Router>
     );
