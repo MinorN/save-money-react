@@ -6,7 +6,7 @@ import React from 'react';
 const NavWrapper = styled.nav`
   line-height: 24px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
-
+  background-color: #fff;
   > ul {
     display: flex;
 
@@ -44,13 +44,13 @@ const Nav = () => {
         <NavWrapper>
             <ul>
                 <li>
-                    <NavLink to="/tags" activeClassName="selected"><Icon name={'tag'}/>标签页</NavLink>
+                    <NavLink to="/tags" activeClassName="selected"><Icon name={'tag'}/>标签</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/money" activeClassName="selected"><Icon name={'money'}/>记账页</NavLink>
+                    <NavLink to="/money" activeClassName="selected"><Icon name={'money'}/>记账</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/Statistics" activeClassName="selected"><Icon name={'chart'}/>统计页</NavLink>
+                    <NavLink to="/Statistics" activeClassName="selected"><Icon name={'chart'}/>统计</NavLink>
                 </li>
             </ul>
         </NavWrapper>
