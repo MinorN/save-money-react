@@ -40,7 +40,7 @@ const Tag: React.FC = () => {
                 <Icon/>
             </TopBar>
             <InputWrapper>
-                <Input label={'标签名'} type={'text'} placeholder={tag.name}/>
+                <Input label={'标签名'} type={'text'} value={tag.name}/>
             </InputWrapper>
             <Center>
                 <Space />
