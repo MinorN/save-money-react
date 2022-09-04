@@ -3,6 +3,7 @@ import React from 'react';
 import {useTags} from 'useTags';
 import styled from 'styled-components';
 import Icon from '../components/Icon';
+import {Link} from 'react-router-dom';
 
 const TagList = styled.ol`
   font-size: 16px;
@@ -10,14 +11,17 @@ const TagList = styled.ol`
 
   > li {
     line-height: 20px;
-    padding: 12px 0 12px 0;
     margin-left: 16px;
     margin-right: 16px;
     border-bottom: 1px solid #d5d5d5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
+
+    > a {
+      padding: 12px 0 12px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
   }
 `;
 
@@ -41,6 +45,7 @@ const Space = styled.div`
   height: 16px;
 `;
 
+
 function Tags() {
     const {tags, setTags} = useTags();
     return (
@@ -49,11 +54,12 @@ function Tags() {
                 {
                     tags.map(tag =>
                         <li key={tag}>
-                            <span className={'oneLine'}>{tag}</span>
-                            <Icon name={'right'}/>
+                            <Link to={'/tags/' + tag}>
+                                <span className={'oneLine'}>{tag}</span>
+                                <Icon name={'right'}/>
+                            </Link>
                         </li>)
                 }
-
             </TagList>
             <Center>
                 <Space/>
