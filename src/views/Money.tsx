@@ -18,7 +18,7 @@ function Money() {
         tags: [] as string[],
         note: '',
         category: '-' as Category,
-        amount: 0
+        amount: '0'
     });
     type Selected = typeof selected
     const onChange = (obj: Partial<Selected>) => {
