@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import React, {ChangeEventHandler, useRef} from 'react';
+import React, {ChangeEventHandler,} from 'react';
 import Input from 'components/Input';
 
 const Wrapper = styled.section`
@@ -15,7 +15,6 @@ type Props = {
 
 const NoteSection: React.FC<Props> = (props) => {
     const note = props.value;
-    const inputRef = useRef<HTMLInputElement>(null);
     const onChange: ChangeEventHandler<HTMLInputElement> = (e) => {
         props.onChange(e.target.value);
     };
